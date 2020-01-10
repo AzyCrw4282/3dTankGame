@@ -35,7 +35,12 @@ public class GameMap {
         this.bitmap[x][z][1] = val;
     }
 
-
+    public boolean isMovable(int x, int z) {
+        if (x >= this.maxX || x <= 0 || z >= this.maxZ || z < 0) {
+            return false;
+        }
+        return this.bitmap[x][z][0];
+    }
 
     public boolean isShootover(int x, int z) {
         if (x >= this.maxX || x <= 0 || z >= this.maxZ || z < 0) {
