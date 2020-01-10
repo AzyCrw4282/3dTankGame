@@ -19,7 +19,14 @@ public class PlayerManager {
         PlayerManager.keyDown(Repository.PLAYERS_ON_SERVER.get(message.getFrom()), message.getKey());
     }
 
-
+    public static void keyDown(Player player, String key) {
+        char c = key.charAt(0);
+        if ((c >= '0' && c <= '9') || c == ' ') {
+            PowerManager.handle(player, key);
+            return;
+        }
+        player.keyDown(key);
+    }
 
     public static void handle(MessageKeyUp message) {
         PlayerManager.keyUp(Repository.PLAYERS_ON_SERVER.get(message.getFrom()), message.getKey());
