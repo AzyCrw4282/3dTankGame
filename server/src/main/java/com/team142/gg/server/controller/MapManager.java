@@ -55,6 +55,8 @@ public class MapManager {
 
     }
 
+
+    //TBA -> Requires revamp of the map, change to this and the calling classes
     public static void createGrass(int x, int y, Game game) {
         createTile(x, y, game, GRASS_TILE, true, true);
 

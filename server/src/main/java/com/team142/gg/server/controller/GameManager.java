@@ -99,7 +99,7 @@ public class GameManager {
         player.getTANK().getPoint().setZ(z);
 
     }
-
+    //TBA-> changes to this for a better user welcoming
     private static void welcomePlayerToGame(String playerId) {
         LOG.log(Level.INFO, "Welcoming player ({0}) to game", new String[]{playerId});
         ViewManager.changePlayerView(playerId, ViewType.VIEW_CANVAS);
