@@ -1,0 +1,4 @@
+docker logs -f --tail all 21e76e037582
+
+docker build -t t/t:t .
+docker run --name gg --publish 8080:8080 --env REPORT_SERVER_STATS_AS=dev t/t:t
